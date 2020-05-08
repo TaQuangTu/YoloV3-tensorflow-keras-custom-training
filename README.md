@@ -16,9 +16,15 @@ A tutorial for training YoloV3 model with `KAIST` data set. This tutorial try to
 4. Prepare your dataset
 <br> Push data set up to `dataset` folder:
 <br>
-![Dataset Tree](https://imgur.com/a/3TmWcWw)
+   Project<br>
+      --dataset<br>
+        annotations.zip<br>
+        set00.zip<br>
+        set01.zip<br>
+        set02.zip<br>
+        ..<br>
+        set11.zip<br>
 <br>
-!Note: Don't care `images` folder, it's redundance.
 5. Now you need create `annotation file` to train, each line in the file will present an image and has format likes following:
 <br>
 
@@ -33,7 +39,10 @@ A tutorial for training YoloV3 model with `KAIST` data set. This tutorial try to
     dataset/images/set01/V004/visible/I01317.jpg 62,232,111,314,0 338,229,395,353,0 363,240,416,351,0 351,219,405,319,2 
     dataset/images/set01/V004/visible/I00647.jpg 
     dataset/images/set01/V004/visible/I01300.jpg 188,233,232,308,0 434,231,491,355,0 470,240,515,346,0 469,218,518,313,2 
+    
+    
 <br>
+
 Line format = `image_path+' '+xmin,ymin,xmax,ymax,class_label+' '+(more if the image has more than one object)`
 <br> I have created and named the file `4_CLASS_test.txt`
 <br> You also need a class names file, I created it already - `4_CLASS_test_classes.txt` likes below:<br>
@@ -43,10 +52,27 @@ Line format = `image_path+' '+xmin,ymin,xmax,ymax,class_label+' '+(more if the i
       cyclist
       person?
 
+
 6. extract dataset zip files to colab temperary folder named `sample_data` for faster training (than training with dataset inside driver)<br>
 <br> Run: `!python extract.py`
 <br>Make sure folder tree be like: <br>
-![sample_data folder tree](https://imgur.com/a/IzFnVY6)
+sample_data:<br>
+  --dataset:<br>
+    --annotations:<br>
+      --set00<br>
+      --set01<br>
+      --set02<br>
+      --set03<br>
+      --set04<br>
+      --set05<br>
+      ...<br>
+      --set11<br>
+    --images<br>
+      --set00<br>
+      --set01<br>
+      --set02<br>
+      ...<br>
+      --set11<br>
 <br>
 7. Train
 <br> Look into `train.py` file, on `create_model` method call, change parameter 'weights_path' to the weight file which has been downloaded a moment ago.
