@@ -15,7 +15,9 @@ A tutorial for training YoloV3 model with `KAIST` data set. This tutorial try to
 * Run command: `!python convert.py`
 4. Prepare your dataset
 <br> Push data set up to `dataset` folder:
+<br>
 ![Dataset Tree](https://imgur.com/a/3TmWcWw)
+<br>
 !Note: Don't care `images` folder, it's redundance.
 5. Now you need create `annotation file` to train, each line in the file will present an image and has format likes following:
 <br>
@@ -45,6 +47,7 @@ Line format = `image_path+' '+xmin,ymin,xmax,ymax,class_label+' '+(more if the i
 <br> Run: `!python extract.py`
 <br>Make sure folder tree be like: <br>
 ![sample_data folder tree](https://imgur.com/a/IzFnVY6)
+<br>
 7. Train
 <br> Look into `train.py` file, on `create_model` method call, change parameter 'weights_path' to the weight file which has been downloaded a moment ago.
 <br> Run: `!python train.py`
