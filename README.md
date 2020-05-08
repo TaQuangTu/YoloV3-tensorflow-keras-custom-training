@@ -53,7 +53,7 @@ Line format = `image_path+' '+xmin,ymin,xmax,ymax,class_label+' '+(more if the i
       person?
 
 
-6. extract dataset zip files to colab temperary folder named `sample_data` for faster training (than training with dataset inside driver)<br>
+6. extract dataset zip files to colab temperary folder named `sample_data` for faster training (than training with dataset inside drive)<br>
 <br> Run: `!python extract.py`
 <br>Make sure folder tree be like: <br>
 *sample_data*:<br>
