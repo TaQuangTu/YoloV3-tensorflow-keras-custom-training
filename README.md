@@ -16,8 +16,8 @@ A tutorial for training YoloV3 model with `KAIST` data set. This tutorial try to
 4. Prepare your dataset
 <br> Push data set up to `dataset` folder:
 <br>
-Project<br>
-     --dataset<br>
+*Project_folder*<br>
+     --*dataset*<br>
      ----annotations.zip<br>
      ----set00.zip<br>
      ----set01.zip<br>
@@ -56,9 +56,9 @@ Line format = `image_path+' '+xmin,ymin,xmax,ymax,class_label+' '+(more if the i
 6. extract dataset zip files to colab temperary folder named `sample_data` for faster training (than training with dataset inside driver)<br>
 <br> Run: `!python extract.py`
 <br>Make sure folder tree be like: <br>
-sample_data:<br>
-  --dataset:<br>
-  --annotations:<br>
+*sample_data*:<br>
+  --*dataset*:<br>
+  --*annotations*:<br>
   ----set00<br>
   ----set01<br>
   ----set02<br>
@@ -67,13 +67,17 @@ sample_data:<br>
   ----set05<br>
   ----...<br>
   ----set11<br>
-  --images<br>
+  --*images*:<br>
   ----set00<br>
   ----set01<br>
   ----set02<br>
   ----...<br>
   ----set11<br>
 <br>
+
 7. Train
+
+
 <br> Look into `train.py` file, on `create_model` method call, change parameter 'weights_path' to the weight file which has been downloaded a moment ago.
+
 <br> Run: `!python train.py`
