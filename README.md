@@ -16,14 +16,14 @@ A tutorial for training YoloV3 model with `KAIST` data set. This tutorial try to
 4. Prepare your dataset
 <br> Push data set up to `dataset` folder:
 <br>
-   Project<br>
-      --dataset<br>
-        annotations.zip<br>
-        set00.zip<br>
-        set01.zip<br>
-        set02.zip<br>
-        ..<br>
-        set11.zip<br>
+Project<br>
+     --dataset<br>
+     ----annotations.zip<br>
+     ----set00.zip<br>
+     ----set01.zip<br>
+     ----set02.zip<br>
+     ----..<br>
+     ----set11.zip<br>
 <br>
 5. Now you need create `annotation file` to train, each line in the file will present an image and has format likes following:
 <br>
@@ -58,21 +58,21 @@ Line format = `image_path+' '+xmin,ymin,xmax,ymax,class_label+' '+(more if the i
 <br>Make sure folder tree be like: <br>
 sample_data:<br>
   --dataset:<br>
-    --annotations:<br>
-      --set00<br>
-      --set01<br>
-      --set02<br>
-      --set03<br>
-      --set04<br>
-      --set05<br>
-      ...<br>
-      --set11<br>
-    --images<br>
-      --set00<br>
-      --set01<br>
-      --set02<br>
-      ...<br>
-      --set11<br>
+  --annotations:<br>
+  ----set00<br>
+  ----set01<br>
+  ----set02<br>
+  ----set03<br>
+  ----set04<br>
+  ----set05<br>
+  ----...<br>
+  ----set11<br>
+  --images<br>
+  ----set00<br>
+  ----set01<br>
+  ----set02<br>
+  ----...<br>
+  ----set11<br>
 <br>
 7. Train
 <br> Look into `train.py` file, on `create_model` method call, change parameter 'weights_path' to the weight file which has been downloaded a moment ago.
