@@ -78,6 +78,6 @@ Line format = `image_path+' '+xmin,ymin,xmax,ymax,class_label+' '+(more if the i
 7. Train
 
 
-<br> Look into `train.py` file, on `create_model` method call, change parameter 'weights_path' to the weight file which has been downloaded a moment ago.
+<br> Look into `train.py` file, on `create_model` method call, change parameter `weights_path` to the weight file which has been downloaded a moment ago.
 
 <br> Run: `!python train.py`
