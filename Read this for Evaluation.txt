@@ -1,0 +1,4 @@
+1. Extract 'annotation.zip' in your working directory.
+2. Copy folder 'evaluation' and file 'evaluate_new.py' to your working directory.
+3. Run 'python evaluate_new.py'.
+4. Run 'python evaluation/pascalvoc.py'.
