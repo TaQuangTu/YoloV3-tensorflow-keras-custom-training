@@ -1,5 +1,5 @@
 # YoloV3-tensorflow-keras-custom-training
-A tutorial for training YoloV3 model with `KAIST` data set. This tutorial try to help you train YoloV3 model on Google Colab in a short time.
+A tutorial for training YoloV3 model with `KAIST` data set. This tutorial help you train YoloV3 model on Google Colab in a short time.
 </br>**<h2>Steps:</h2>**</br>
 1. Clone this repository and upload the project to your `Google Drive`
 2. Create a new Google Colab and `Mount Drive`
